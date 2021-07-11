@@ -1,3 +1,5 @@
 = Example Wiki =
 
-Hello, world
+[[About]]
+
+Hello, welcome to my Wiki!

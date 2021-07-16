@@ -22,5 +22,11 @@ deps:
 build:
   FROM +deps
   COPY wiki wiki 
-  RUN nvim --headless +VimwikiIndex +VimwikiAll2HTML +qall >/dev/null
+  RUN nvim --headless \
+    +VimwikiIndex \
+    +VimwikiGenerateLinks \
+    +VimwikiRebuildTags \
+    +VimwikiGenerateTagLinks \
+    +VimwikiAll2HTML \
+    +qall
   SAVE ARTIFACT /home/$USERNAME/build AS LOCAL build
